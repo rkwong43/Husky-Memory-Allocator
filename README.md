@@ -39,6 +39,9 @@ Specifications of local machine:
     * OS: Ubuntu 18.04.3 LTS
     * RAM: 16GB
 
-    
+Without as many system calls or locks as malloc() in hmem, the bucket
+and arena system proved to be much more efficient. However, calls to
+memcpy() may have slowed the arena-based Husky Allocator down, as well
+as handling data traversal and defragmentation.
 
 
